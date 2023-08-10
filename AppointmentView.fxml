@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="624.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c195.sw2.Appointmentview">
+    <children>
+        <RadioButton fx:id="monthly" layoutX="12.0" layoutY="592.0" mnemonicParsing="false" onAction="#Monthly" selected="true" text="Monthly">
+         <toggleGroup>
+            <ToggleGroup fx:id="Filters"/>
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="weekly" layoutX="12.0" layoutY="570.0" mnemonicParsing="false" onAction="#Weekly" text="Weekly" toggleGroup="$Filters" />
+        <RadioButton fx:id="all" layoutX="12.0" layoutY="546.0" mnemonicParsing="false" onAction="#AllAppts" text="All" toggleGroup="$Filters">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font>
+        </RadioButton>
+        <TableView fx:id="Appointments" layoutX="90.0" layoutY="91.0" prefHeight="388.0" prefWidth="804.0">
+            <columns>
+                <TableColumn fx:id="ApptID" prefWidth="61.5999755859375" text="Appt. ID" />
+                <TableColumn fx:id="ApptLocation" prefWidth="109.59991455078125" text="Location" />
+                <TableColumn fx:id="ApptTitle" prefWidth="88.800048828125" text="Title" />
+                <TableColumn fx:id="CustID" prefWidth="82.39996337890625" text="Cust. ID" />
+                <TableColumn fx:id="CustomerName" prefWidth="75.0" text="Client Name" />
+                <TableColumn fx:id="ApptType" prefWidth="73.5999755859375" text="Type" />
+                <TableColumn fx:id="ApptDescription" prefWidth="104.80003356933594" text="Description" />
+                <TableColumn fx:id="BeginTime" prefWidth="108.0" text="Begins" />
+                <TableColumn fx:id="EndTime" prefWidth="97.60003662109375" text="Ends" />
+            </columns>
+        </TableView>
+        <Label fx:id="TimeFrame" layoutX="176.0" layoutY="491.0" prefHeight="18.0" prefWidth="141.0" text="Time Frame:">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="selectedTimeLabel" layoutX="176.0" layoutY="513.0" prefHeight="18.0" prefWidth="515.0" text="Showing Appointments Through:">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <Button fx:id="back" layoutX="99.0" layoutY="487.0" mnemonicParsing="false" onAction="#GoBack" prefHeight="18.0" prefWidth="65.0" text="Previous" />
+        <Button fx:id="next" layoutX="823.0" layoutY="487.0" mnemonicParsing="false" onAction="#PressNext" prefHeight="26.0" prefWidth="65.0" text="Next" />
+        <Button fx:id="New" layoutX="12.0" layoutY="127.0" mnemonicParsing="false" onAction="#PressNew" prefHeight="26.0" prefWidth="55.0" text="New" />
+        <Button fx:id="edit" layoutX="12.0" layoutY="169.0" mnemonicParsing="false" onAction="#PressEdit" prefHeight="26.0" prefWidth="55.0" text="Edit" />
+        <Button fx:id="customers" layoutX="607.0" layoutY="588.0" mnemonicParsing="false" onAction="#PressCustomers" prefHeight="26.0" prefWidth="86.0" text="Customers" />
+        <Button fx:id="logOut" layoutX="818.0" layoutY="588.0" mnemonicParsing="false" onAction="#PressLogOff" prefHeight="26.0" prefWidth="74.0" text="Log out" />
+        <Button fx:id="delete" layoutX="12.0" layoutY="217.0" mnemonicParsing="false" onAction="#PressDelete" prefHeight="18.0" prefWidth="55.0" text="Delete" />
+        <Button fx:id="reports" layoutX="717.0" layoutY="588.0" mnemonicParsing="false" onAction="#PressReports" prefHeight="26.0" prefWidth="74.0" text="Reports" />
+      <Label fx:id="masterSchedule" layoutX="301.0" layoutY="14.0" text="Master Schedule">
+         <font>
+            <Font size="54.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
